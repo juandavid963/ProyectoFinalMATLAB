@@ -1,0 +1,132 @@
+004-005 @WRITE_PROGRAM_MEMORY.P1
+004-005 @READ_PROGRAM_MEMORY.P2
+006     lcd
+008     PSP_DATA
+015     CCP_1_LOW
+015-016 CCP_1
+016     CCP_1_HIGH
+01B-01C CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020-023 dato1
+024-027 temp
+028     enviar1
+029     tipo
+02A     band
+02B     band1
+02C-02F @DIVFF.P1
+02C-02D @ITOF.P2
+02C-02F @SFTOI.P3
+02C     lcd_init.i
+02C-02F @FLT.P1
+02C     MAIN.@SCRATCH
+02D-030 @PRINTF_L32D_80FPFPF.P1
+02D     lcd_init.@SCRATCH
+02D     MAIN.@SCRATCH
+02E     MAIN.@SCRATCH
+02F     MAIN.@SCRATCH
+030-033 @FLT.P1
+030-033 @DIVFF.P2
+031     @PRINTF_L32D_80FPFPF.P1
+032     @PRINTF_L32D_80FPFPF.@SCRATCH
+033     @PRINTF_L32D_80FPFPF.@SCRATCH
+034     @DIVFF.@SCRATCH
+034     @FLT.@SCRATCH
+034     @PRINTF_L32D_80FPFPF.@SCRATCH
+035     @DIVFF.@SCRATCH
+035     @FLT.@SCRATCH
+035     @PRINTF_L32D_80FPFPF.@SCRATCH
+036     @DIVFF.@SCRATCH
+036     @PRINTF_L32D_80FPFPF.@SCRATCH
+037     @DIVFF.@SCRATCH
+037     @PRINTF_L32D_80FPFPF.@SCRATCH
+038     @DIVFF.@SCRATCH
+038     @PRINTF_L32D_80FPFPF.@SCRATCH
+039     @DIVFF.@SCRATCH
+039     @PRINTF_L32D_80FPFPF.@SCRATCH
+03A-03D @FTOSD.P1
+03A-03D @MULFF.P2
+03A     lcd_putc.c
+03A-03D @DIV3232.P1
+03B     @delay_ms1.P1
+03B     lcd_gotoxy.x
+03C     lcd_gotoxy.y
+03D     lcd_gotoxy.address
+03E-041 @MULFF.P1
+03E-041 @DIV3232.P2
+03E     lcd_gotoxy.@SCRATCH
+03E     @FTOSD.@SCRATCH
+03F     lcd_send_byte.address
+040     lcd_send_byte.n
+041     lcd_read_byte.low
+041     lcd_send_byte.@SCRATCH
+042     lcd_send_nibble.n
+042     lcd_read_byte.high
+042     @MULFF.@SCRATCH
+042     @DIV3232.@SCRATCH
+043     lcd_read_byte.@SCRATCH
+043     @MULFF.@SCRATCH
+043     @DIV3232.@SCRATCH
+044     @MULFF.@SCRATCH
+044     @DIV3232.@SCRATCH
+045     @MULFF.@SCRATCH
+045     @DIV3232.@SCRATCH
+046     @MULFF.@SCRATCH
+046     @DIV3232.@SCRATCH
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D     @WRITE_PROGRAM_MEMORY.P1
+10D     @READ_PROGRAM_MEMORY.P2
+10F     @READ_PROGRAM_MEMORY.P1
+10F     @WRITE_PROGRAM_MEMORY.P2
+
+0030  @delay_ms1
+0004  LCD_INIT_STRING
+0052  lcd_read_byte
+0045  lcd_send_nibble
+0051  lcd_send_byte
+008B  lcd_init
+026D  lcd_gotoxy
+0256  lcd_putc
+03D9  MAIN
+00B7  @ITOF
+00D4  @DIVFF
+01A0  @MULFF
+0215  @FLT
+000C  @const105
+028B  @FTOSD
+02AC  @DIV3232
+02EE  @PRINTF_L32D_80FPFPF
+03BA  @SFTOI
+03D9  @cinit
+
+Project Files:
+    _adc3.c
+    ..\..\..\..\..\..\PROGRA~1\PICC\devices\16F877a.h
+    ..\..\..\..\..\..\PROGRA~1\PICC\drivers\lcd.c
+
+Units:
+    C:\Users\JuanCqr\Documents\Usco\Matlab\Proyecto Final\_adc3.c (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      0
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      C:\Users\JuanCqr\Documents\Usco\Matlab\Proyecto Final\_adc3.err
+    Ext Symbols: C:\Users\JuanCqr\Documents\Usco\Matlab\Proyecto Final\_adc3.esym
+    INHX8:       C:\Users\JuanCqr\Documents\Usco\Matlab\Proyecto Final\_adc3.hex
+    Symbols:     C:\Users\JuanCqr\Documents\Usco\Matlab\Proyecto Final\_adc3.sym
+    List:        C:\Users\JuanCqr\Documents\Usco\Matlab\Proyecto Final\_adc3.lst
+    Debug/COFF:  C:\Users\JuanCqr\Documents\Usco\Matlab\Proyecto Final\_adc3.cof
+    Call Tree:   _adc3.tre
+    Statistics:  _adc3.sta
